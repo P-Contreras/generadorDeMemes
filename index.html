@@ -16,41 +16,108 @@
         <h1 class="is-flex encabezado">
             Generador de Memes
         </h1>
-        <div class="contenedor-botones">
+        <div class="is-flex contenedor-botones">
             <!-- botones del encabezado -->
-            <button class="unstyle">
+            <button class="boton unstyle">
                 <i class="fa-regular fa-image"></i>
                 Imagen
             </button>
-            <button class="unstyle">
+            <button class="boton unstyle">
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
-            <button class="unstyle">
+            <button class="boton unstyle">
                 <i class="fa-regular fa-lightbulb"></i>
-                Modo oscuro
+                Modo claro
             </button>
         </div>
     </header>
-    <aside class="is-flex panel">
-        <h2>
-            IMAGEN
-        </h2>
-    </aside>
-    <aside>
-    <main class="is-flex">
-        <p>
+    <main>
+        <p class="texto-meme">
             Top text
         </p>
-        <div>
+        <div class="imagen-meme">
             Imagen
         </div>
-        <p>
+        <p class="texto-meme">
             Bottom text
         </p>
     </main>
+    <aside class="panel">
+        <h2 class="titulo-panel">
+            IMAGEN
+        </h2>
+        <section>
+            <div class="container">
+                <h3>url</h3>
+                <input type="text">
+            </div>
+            <div class="container-fondo">
+                <h3>
+                    fondo
+                </h3>
+                <div class="container-fondo">
+                        <input type="color" value="transparent" id="color">
+                        <select name="select-fondo" id="select">select
+                            <option value="value1" selected>Ninguno</option>
+                            <option value="value2">Aclarar</option>
+                            <option value="value3">Oscurecer</option>
+                            <option value="value4">Diferencia</option>
+                            <option value="value5">Luminosidad</option>
+                            <option value="value6">Multiplicar</option>
+                        </select>
+                </div>
+            </div>
+            <div>
+                <h3>
+                    filtros
+                </h3>
+                <div class="container-filtros">
+                    <label for="brillo">Brillo</label>
+                    <input type="range" min="1" max="100" value="100" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="opacidad">Opacidad</label>
+                    <input type="range" min="1" max="100" value="100" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="contraste">Contraste</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="desenfoque">Desenfoque</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="escala">Escala de grises</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="sepia">Sepia</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="hue">Hue</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="saturado">Saturado</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+                <div class="container-filtros">
+                    <label for="negativo">Negativo</label>
+                    <input type="range" min="1" max="100" value="1" class="" id="">
+                </div>
+            </div>
+            <button class="unstyle boton-filtros">Reestablecer filtros</button>
+        </section>
         
     </aside>
+
+    <!-- <aside class="is-flex panel">
+        TEXTO
+    </aside> -->
+        
 
 
 
