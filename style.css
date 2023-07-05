@@ -20,16 +20,16 @@ header{
 }
 
 .encabezado {
-    font-size: 3em;
+    font-size: 40px;
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
     justify-content: center;
 }   
 
 .boton {
     font-size: 18px;
     padding: 10px;
-    height: 30px;
+    height: 25px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -42,6 +42,39 @@ header{
 .contenedor-botones {
     justify-content: center;
     margin: 0;
+}
+
+.seccion-main {
+    padding: 80px 80px 50px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-meme {
+    font-size: 40px;
+    text-align: center;
+    padding: 40px;
+    background-color: whitesmoke;
+    height: 12vh;
+    width: 63vh;
+    font-weight: 900;
+}
+
+.imagen-meme {
+    background-color: black;
+    height: 40vh;
+    width: 63vh;
+}
+
+.boton-descargar {
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgb(50, 151, 50);
+    margin-top: 25px;
+    cursor: pointer; 
 }
 
 .titulo-panel {
@@ -76,11 +109,22 @@ h3 {
     margin-bottom: 20px;
 }
 
-.container-fondo {
-    margin-bottom: 10px;
+textarea {
+    resize: vertical;
+    border: none;
 }
 
-.container-fondo input[type="color"],
+.container-fondo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container input[type=color] {
+    background-color: red;
+    width: 50%;
+}
+
+.color-fondo input[type="color"],
 input[type="color"]::-webkit-color-swatch-wrapper,
 input[type="color"]::-webkit-color-swatch {
     width: 40px;
@@ -89,12 +133,24 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 100%;
     background-color: transparent;
     margin-bottom: 15px;
+    border: 0;
+}
+
+.div {
+    display: flex;
+    justify-content:space-between;
+}
+
+.color-imagen {
+    width: 50%;
+    margin: 0;
 }
 
 .container-fondo select {
-    font-size: 17px;
+    font-size: 15px;
     padding: 5px;
-    margin-left: 30px;
+    border: 0;
+    margin-left: 50px;
     }
 
 .container-filtros {
@@ -113,6 +169,90 @@ input[type="color"]::-webkit-color-swatch {
     padding: 5px;
     justify-content: center;
 }
+
+.input-texto {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+}
+
+.checks {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.checks label {
+    margin-left: 10px;
+}
+
+.panel-texto {
+    margin-bottom: 20px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.panel-texto textarea {
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.panel-fuente select {
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.panel-fuente input {
+    font-size: 17px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.botones-align {
+    font-size: 22px;
+    background-color: #e7d2b6;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.color-fondo {
+    margin: 10px;
+    width: 100px;
+    height: 35px;
+    background-color: #e7d2b6;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+span {
+    margin-top: 10px;
+}
+
+.container-fondo h3 {
+    margin-top: 10px;
+}
+
+.container-fondo input[type="color"],
+input[type="color"]::-webkit-color-swatch-wrapper,
+input[type="color"]::-webkit-color-swatch {
+    width: 38px;
+    height: 32px;
+    min-width: 18px;
+    border-radius: 100%;
+    border: 0;
+}
+
 
 .boton-filtros {
     font-size: 18px;
@@ -140,8 +280,19 @@ input[type="color"]::-webkit-color-swatch {
     justify-content: center;
 }
 
-main {
-    background-color: #e7d2b6;
-    height: 87vh;
+.panel2 {
+    width: 14%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#E9DFE3;
+    overflow: hidden;
+    padding: 20px;
+    justify-content: center;
 }
 
+main {
+    background-color: #e7d2b6;
+    height: 86vh;
+}

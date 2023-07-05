@@ -33,42 +33,55 @@
         </div>
     </header>
     <main>
-        <p class="texto-meme">
-            Top text
-        </p>
-        <div class="imagen-meme">
-            Imagen
-        </div>
-        <p class="texto-meme">
-            Bottom text
-        </p>
+        <section class="seccion-main">
+            <p class="texto-meme">
+                Top text
+            </p>
+            <div class="imagen-meme">
+                Imagen
+            </div>
+            <p class="texto-meme">
+                Bottom text
+            </p>
+            <button class="unstyle boton-descargar">
+                <i class="fa-solid fa-download"></i>
+                Descargar meme
+            </button>
+        </section>
     </main>
     <aside class="panel">
         <h2 class="titulo-panel">
             IMAGEN
         </h2>
         <section>
-            <div class="container">
-                <h3>url</h3>
-                <input type="text">
-            </div>
-            <div class="container-fondo">
-                <h3>
-                    fondo
-                </h3>
-                <div class="container-fondo">
-                        <input type="color" value="transparent" id="color">
-                        <select name="select-fondo" id="select">select
-                            <option value="value1" selected>Ninguno</option>
-                            <option value="value2">Aclarar</option>
-                            <option value="value3">Oscurecer</option>
-                            <option value="value4">Diferencia</option>
-                            <option value="value5">Luminosidad</option>
-                            <option value="value6">Multiplicar</option>
-                        </select>
+            <div>
+                <div class="container">
+                    <h3>url</h3>
+                    <input type="text">
                 </div>
             </div>
-            <div>
+                <div>
+                    <h3>
+                        fondo
+                    </h3>
+                    <div class="div color-fondo">
+                        <input type="color" value="transparent" id="">
+                        <span>AAAA</span>
+                        <div class="container-fondo">
+                            <select name="select-fondo" id="select">select
+                                <option value="value1" selected>Ninguno</option>
+                                <option value="value2">Aclarar</option>
+                                <option value="value3">Oscurecer</option>
+                                <option value="value4">Diferencia</option>
+                                <option value="value5">Luminosidad</option>
+                                <option value="value6">Multiplicar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    
+                </div>
                 <h3>
                     filtros
                 </h3>
@@ -110,13 +123,89 @@
                 </div>
             </div>
             <button class="unstyle boton-filtros">Reestablecer filtros</button>
-        </section>
-        
+        </section>        
     </aside>
 
-    <!-- <aside class="is-flex panel">
-        TEXTO
-    </aside> -->
+
+    <aside class="is-flex panel2">
+        <h2 class="titulo-panel">
+            TEXTO
+        </h2>
+        <section>
+            <div class="panel-texto">
+                <h3>
+                    superior
+                </h3>
+                    <textarea name="topText" class="input-texto" id="" cols="30" rows="10">Top text</textarea>
+                    <div class="checks">
+                        <input type="checkbox">
+                        <label for="sin-top">Sin texto superior</label>
+                    </div>
+            </div>
+            <div class="panel-texto">
+                <h3>
+                    inferior
+                </h3>
+                    <textarea name="bottomText" class="input-texto" id="" cols="30" rows="10">Bottom text</textarea>
+                    <div class="checks">
+                        <input type="checkbox">
+                        <label for="sin-top">Sin texto inferior</label>
+                    </div>
+            </div>
+            <div class="panel-fuente">
+                <h3>
+                    fuente
+                </h3>
+                <div class="is-flex">
+                    <select name="fuente" id="">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact" selected>Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <input type="number" class="input-tamanio-fuente" name="tamanio de fuente" min="12" value="40">
+                    <div class="is-flex">
+                        <button  class="unstyle botones-align">
+                            <i class="fa-solid fa-align-left"></i>
+                        </button>
+                        <button class="unstyle botones-align">
+                            <i class="fa-solid fa-align-center"></i>
+                        </button>
+                        <button class="unstyle botones-align">
+                            <i class="fa-solid fa-align-right"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <!-- color y fondo -->
+
+                <div class="container-fondo">
+                    <div>
+                        <h3>
+                            color
+                        </h3>
+                        <div class="color-fondo container-fondo">
+                            <input type="color" value="transparent" id="">
+                            <span>aaaaaa</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            fondo
+                        </h3>
+                        <div class="color-fondo container-fondo">
+                            <input type="color" value="transparent" id="">
+                            <span>aaaaaa</span>
+                        </div>
+                    </div>
+                    </div>
+        </section>
+    </aside>
         
 
 
