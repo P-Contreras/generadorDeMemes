@@ -80,13 +80,15 @@ header{
 .titulo-panel {
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
 }
 
 h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    margin-top: 25px;
+    text-align:center;
 }
 
 .container label {
@@ -159,6 +161,13 @@ input[type="color"]::-webkit-color-swatch {
     flex-direction: column;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    cursor: ew-resize;
+    transition: background .3s ease-in-out;
+}
+
 .container-filtros label {
     font-weight: bolder;
     font-size: 14px;
@@ -166,7 +175,7 @@ input[type="color"]::-webkit-color-swatch {
     width: auto;
     top: 10px;
     left: 20px;
-    padding: 5px;
+    padding: 2px;
     justify-content: center;
 }
 
@@ -181,6 +190,7 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     text-align: center;
     align-items: flex-start;
+    margin-left: 20px;
 }
 
 .checks label {
@@ -253,6 +263,29 @@ input[type="color"]::-webkit-color-swatch {
     border: 0;
 }
 
+.espaciado-interlineado input {
+    width: 95%;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px;
+}
+
+.espaciado-interlineado select {
+    width: 95%;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 0;
+    padding: 5px 10px;
+}
+
+
+.botones-texto {
+    font-size: 20px;
+    margin: 2px;
+}
 
 .boton-filtros {
     font-size: 18px;
@@ -280,19 +313,11 @@ input[type="color"]::-webkit-color-swatch {
     justify-content: center;
 }
 
-.panel2 {
-    width: 14%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color:#E9DFE3;
-    overflow: hidden;
-    padding: 20px;
-    justify-content: center;
-}
-
 main {
     background-color: #e7d2b6;
     height: 86vh;
+}
+
+.hidden {
+    display: none;
 }

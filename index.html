@@ -18,11 +18,11 @@
         </h1>
         <div class="is-flex contenedor-botones">
             <!-- botones del encabezado -->
-            <button class="boton unstyle">
+            <button class="boton unstyle" id="boton-imagen">
                 <i class="fa-regular fa-image"></i>
                 Imagen
             </button>
-            <button class="boton unstyle">
+            <button class="boton unstyle" id="boton-texto">
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
@@ -32,7 +32,7 @@
             </button>
         </div>
     </header>
-    <main>
+    <main class="main-container" id="main-container">
         <section class="seccion-main">
             <p class="texto-meme">
                 Top text
@@ -49,7 +49,9 @@
             </button>
         </section>
     </main>
-    <aside class="panel">
+
+    
+    <aside class="panel" id="asideImagen">
         <h2 class="titulo-panel">
             IMAGEN
         </h2>
@@ -65,8 +67,7 @@
                         fondo
                     </h3>
                     <div class="div color-fondo">
-                        <input type="color" value="transparent" id="">
-                        <span>AAAA</span>
+                        <input type="color" value="#FFFFFF" id="colorPicker"><span id="colorName"></span>
                         <div class="container-fondo">
                             <select name="select-fondo" id="select">select
                                 <option value="value1" selected>Ninguno</option>
@@ -87,7 +88,7 @@
                 </h3>
                 <div class="container-filtros">
                     <label for="brillo">Brillo</label>
-                    <input type="range" min="1" max="100" value="100" class="" id="">
+                    <input class="" type="range" min="1" max="100" value="100" class="" id="">
                 </div>
                 <div class="container-filtros">
                     <label for="opacidad">Opacidad</label>
@@ -127,11 +128,11 @@
     </aside>
 
 
-    <aside class="is-flex panel2">
-        <h2 class="titulo-panel">
-            TEXTO
-        </h2>
+    <aside class="is-flex panel hidden" id="asideTexto">
         <section>
+            <h2 class="titulo-panel">
+                TEXTO
+            </h2>
             <div class="panel-texto">
                 <h3>
                     superior
@@ -203,6 +204,49 @@
                             <span>aaaaaa</span>
                         </div>
                     </div>
+                    </div>
+                    <div class="checks">
+                        <input type="checkbox" name="fondo-transparente" id="">
+                        <label for="fondo-transparente">Fondo transparente</label>
+                    </div>
+                    <div>
+                        <h3>
+                            contorno
+                        </h3>
+                        <div>
+                            <button class="unstyle botones-align botones-texto">
+                                Ninguno
+                            </button>
+                            <button class="unstyle botones-align botones-texto">
+                                Claro
+                            </button>
+                            <button class="unstyle botones-align botones-texto">
+                                Oscuro
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            espaciado
+                        </h3>
+                        <div class="espaciado-interlineado">
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            interlineado
+                        </h3>
+                        <div class="espaciado-interlineado">
+                            <select name="interlineado" id="">
+                                <option value="0.8">0.8</option>
+                                <option value="1">1</option>
+                                <option value="1.2" selected>1.2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                            </select>
+                        </div>
                     </div>
         </section>
     </aside>
