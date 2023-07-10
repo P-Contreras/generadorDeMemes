@@ -26,6 +26,32 @@ const showAside = (asideToShow) => {
     }
 };
 
+//funcion descarga meme
+const downloadButton = document.getElementById("download-btn");
+const meme = document.getElementById("meme-container");
+console.log(meme)
+console.log(downloadButton)
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+const downloadMeme = () => {
+domtoimage.toBlob(meme).then(function (blob) {
+    window.saveAs(blob, "mi-meme.png");
+});
+};
+console.log(downloadMeme)
+
+
+//funcion url - imagen
+const urlInput = document.getElementById('url-input');
+const imagenMeme = document.getElementById('imagenmeme');
+
+urlInput.addEventListener('input', function() {
+  const imageUrl = urlInput.value;
+  imagenMeme.style.backgroundImage = `url('${imageUrl}')`;
+});
+
+
 
 
 

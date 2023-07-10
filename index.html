@@ -7,9 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@0;1&family=Josefin+Sans:wght@300;600&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1fb5fcdd4a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+    <link rel="icon" href="https://hips.hearstapps.com/hmg-prod/images/grumpy-cat-gatos-internet-meme-1582125875.jpg?crop=0.663xw:1.00xh;0.169xw,0&resize=1200:*"
 </head>
+
 <body>
     <!-- encabezado -->
     <header>
@@ -32,18 +45,18 @@
             </button>
         </div>
     </header>
-    <main class="main-container" id="main-container">
+    <main class="main-container">
         <section class="seccion-main">
-            <p class="texto-meme">
-                Top text
-            </p>
-            <div class="imagen-meme">
-                Imagen
+            <div id="meme-container">
+                <p class="texto-meme">
+                    Top text
+                </p>
+                <div id="imagenmeme" class="imagen-meme"></div>
+                <p class="texto-meme">
+                    Bottom text
+                </p>
             </div>
-            <p class="texto-meme">
-                Bottom text
-            </p>
-            <button class="unstyle boton-descargar">
+            <button class="unstyle boton-descargar" id="download-btn">
                 <i class="fa-solid fa-download"></i>
                 Descargar meme
             </button>
@@ -59,7 +72,7 @@
             <div>
                 <div class="container">
                     <h3>url</h3>
-                    <input type="text">
+                    <input type="text" id="url-input" placeholder="Ingresa la URL de la imagen">
                 </div>
             </div>
                 <div>
@@ -137,7 +150,7 @@
                 <h3>
                     superior
                 </h3>
-                    <textarea name="topText" class="input-texto" id="" cols="30" rows="10">Top text</textarea>
+                    <textarea name="topText" class="input-texto" id="" cols="30" rows="10" placeholder="Top Text"></textarea>
                     <div class="checks">
                         <input type="checkbox">
                         <label for="sin-top">Sin texto superior</label>
@@ -147,7 +160,7 @@
                 <h3>
                     inferior
                 </h3>
-                    <textarea name="bottomText" class="input-texto" id="" cols="30" rows="10">Bottom text</textarea>
+                    <textarea name="bottomText" class="input-texto" id="" cols="30" rows="10" placeholder="Bottom Text"></textarea>
                     <div class="checks">
                         <input type="checkbox">
                         <label for="sin-top">Sin texto inferior</label>
@@ -251,10 +264,6 @@
         </section>
     </aside>
         
-
-
-
-
 
 
     <script src="script.js"></script>
