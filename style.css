@@ -15,9 +15,15 @@
     text-align: center;
 }
 
-header{
+header {
     background-color: #f8cace;
 }
+
+/* modo oscuro */
+.modo-oscuro {
+    background-color: #251030;
+    color: #e2e2e2;
+} 
 
 .encabezado {
     font-size: 40px;
@@ -41,7 +47,7 @@ header{
 }
 
 .boton:hover{
-    background-color: #fbb4bd;
+    background-color: #ff9f9f;
 }
 
 
@@ -185,6 +191,7 @@ input[type="color"]::-webkit-color-swatch {
 } */
 input[type=range]{
     -webkit-appearance: none;
+    appearance:unset;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -281,7 +288,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .botones-align {
     font-size: 22px;
-    background-color: #e7d2b6;
+    background-color: #b99d77;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
@@ -292,7 +299,7 @@ input[type=range]::-webkit-slider-runnable-track {
     margin: 10px;
     width: 100px;
     height: 35px;
-    background-color: #e7d2b6;
+    background-color: #b99d77;
     padding: 5px;
     border-radius: 5px;
 }
@@ -344,13 +351,13 @@ input[type="color"]::-webkit-color-swatch {
     padding: 5px;
     height: 30px;
     border-radius: 10px;
-    background-color: #ebbace;
+    background-color: #be4a79;
     cursor: pointer;
     font-weight: bold;
 }
 
 .boton-filtros:hover {
-    background-color: rgb(221, 200, 200);
+    background-color: rgb(241, 114, 114);
 }
 
 .panel {
@@ -365,9 +372,19 @@ input[type="color"]::-webkit-color-swatch {
     justify-content: center;
 }
 
+.panel-modo-oscuro {
+    background-color: #6b1c3d;
+    color: whitesmoke;
+}
+
 main {
     background-color: #e7d2b6;
     height: 86vh;
+}
+
+.modo-oscuro-main {
+    background-color: #281831;
+    color: #c54e7b;
 }
 
 .hidden {
