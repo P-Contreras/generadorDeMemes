@@ -47,12 +47,12 @@
     </header>
     <main>
         <section class="seccion-main">
-            <div id="meme-container">
-                <p class="texto-meme">
+            <div class="is-flex container-meme" id="meme-container">
+                <p class="texto-meme" id="top-text-meme">
                     Top text
                 </p>
                 <div id="imagenmeme" class="imagen-meme"></div>
-                <p class="texto-meme">
+                <p class="texto-meme" id="bottom-text-meme">
                     Bottom text
                 </p>
             </div>
@@ -152,7 +152,7 @@
                 </h3>
                     <textarea name="topText" class="input-texto" id="" cols="30" rows="10" placeholder="Top Text"></textarea>
                     <div class="checks">
-                        <input type="checkbox">
+                        <input type="checkbox" id="check-top-text" onchange="textoMemeTop()">
                         <label for="sin-top">Sin texto superior</label>
                     </div>
             </div>
@@ -162,7 +162,7 @@
                 </h3>
                     <textarea name="bottomText" class="input-texto" id="" cols="30" rows="10" placeholder="Bottom Text"></textarea>
                     <div class="checks">
-                        <input type="checkbox">
+                        <input type="checkbox" id="check-bottom-text" onchange="textoMemeBottom()">
                         <label for="sin-top">Sin texto inferior</label>
                     </div>
             </div>

@@ -57,34 +57,45 @@ header {
 }
 
 .seccion-main {
-    padding: 80px 80px 50px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px 30px 87px 30px;
+}
+
+.container-meme {
+    margin-top: 50px;
+    width: 600px;
+    height: 600px;
+    flex-direction: column;
+    align-items: center; 
 }
 
 .texto-meme {
-    font-size: 40px;
-    text-align: center;
-    padding: 40px;
-    background-color: whitesmoke;
-    height: 12vh;
-    width: 63vh;
+    width: 100%;
+    color: #000;
+    background-color: white;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
     font-weight: 900;
 }
 
 .imagen-meme {
     background-color: black;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 40vh;
-    width: 63vh;
+    width: 100%;
+    flex-grow: 1;
 }
 
+
 #imagen-meme {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
 .boton-descargar {
@@ -362,7 +373,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .panel {
     width: 14%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     right: 0;
@@ -378,8 +389,11 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #e7d2b6;
-    height: 86vh;
 }
 
 .modo-oscuro-main {

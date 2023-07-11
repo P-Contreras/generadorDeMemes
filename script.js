@@ -54,7 +54,6 @@ const btnModo = document.getElementById('btn-modo');
 const header = document.querySelector('header');
 const main = document.querySelector('main');
 const panel = document.getElementsByClassName('panel');
-console.log(panel)
 const spanModo = document.getElementById('span-modo');
 
 let modoActual = 'claro';
@@ -76,6 +75,32 @@ btnModo.addEventListener('click', function() {
     modoActual = 'claro';
     }
 });
+
+//funcion: quitar y poner top and bottom text
+
+const checkTopText = document.getElementById('check-top-text');
+const checkBottomText = document.getElementById('check-bottom-text');
+const topTextMeme = document.getElementById('top-text-meme');
+const bottomTextMeme = document.getElementById('bottom-text-meme');
+
+
+const textoMemeTop = () => {
+    if (checkTopText.checked) {
+        topTextMeme.classList.add('hidden');
+    } else {
+        topTextMeme.classList.remove('hidden');
+    }
+}
+const textoMemeBottom = () => {
+    if (checkBottomText.checked) {
+        bottomTextMeme.classList.add('hidden');
+    } else {
+        bottomTextMeme.classList.remove('hidden');
+    }
+}
+
+
+
 
 
 
