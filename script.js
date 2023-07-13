@@ -29,6 +29,7 @@ const showAside = (asideToShow) => {
 //funcion descarga meme
 const downloadButton = document.getElementById("download-btn");
 const meme = document.getElementById("meme-container");
+console.log(meme)
 
 downloadButton.addEventListener("click", () => downloadMeme());
 
@@ -99,8 +100,48 @@ const textoMemeBottom = () => {
     }
 }
 
+//funcion fondo 
+const aplicarFiltro = () => {
+    const selectFondo = document.getElementById("mezcla-de-fondo");
+    const imagen = document.getElementById("imagenmeme");
+
+    const filtro = selectFondo.value;
+
+    if (filtro === "lighten") {
+        imagen.style.filter = "brightness(1.2)";
+    } else if (filtro === "darken") {
+        imagen.style.filter = "brightness(0.8)";
+    } else {
+        imagen.style.filter = filtro;
+    }
+};
 
 
+//funcion color fondo
+const colorPicker = document.getElementById('colorPicker'); //input de color
+const colorName = document.getElementById('colorName'); //span
+
+colorPicker.oninput = () => {
+    imagenMeme.style.backgroundColor = (colorPicker.value);
+    colorName.textContent = (colorPicker.value);
+}
+
+//funcion edición de texto
+
+// const topTextMeme
+// const bottomTextMeme
+const txtTop = document.getElementById('txt-top');   //textarea top
+const txtBottom = document.getElementById('txt-bottom')  //textarea bottom
+
+txtTop.addEventListener("keyup", () => {
+    topTextMeme.innerHTML = txtTop.value;
+});
+
+txtBottom.addEventListener("keyup", () => {
+    bottomTextMeme.innerHTML = txtBottom.value;
+})
+
+//
 
 
 
