@@ -141,7 +141,49 @@ txtBottom.addEventListener("keyup", () => {
     bottomTextMeme.innerHTML = txtBottom.value;
 })
 
-//
+// SELECT FUENTE
+// const topTextMeme
+// const bottomTextMeme
+const selectFontFamily = document.getElementById('font-family');
+
+selectFontFamily.addEventListener('change', () =>{
+if (selectFontFamily.value === "arial") {
+    topTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
+    bottomTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
+}
+else if (selectFontFamily.value === "arial black") {
+topTextMeme.style.fontFamily = "'Arial Black, Gadget, Arial, sans-serif'";
+bottomTextMeme.style.fontFamily = "'Arial Black, Gadget, Arial, sans-serif'";    
+}
+else if (selectFontFamily.value === "georgia") {
+    topTextMeme.style.fontFamily = "Georgia, 'Times New Roman', Times, serif"
+    bottomTextMeme.style.fontFamily = "Georgia, 'Times New Roman', Times, serif"
+}
+else if (selectFontFamily.value === "monospace") {
+    topTextMeme.style.fontFamily = "monospace"
+    bottomTextMeme.style.fontFamily = "monospace"
+}
+else if (selectFontFamily.value === "comic sans ms" ) {
+    topTextMeme.style.fontFamily = "Comic Sans MS"
+    bottomTextMeme.style.fontFamily = "Comic Sans MS"
+}
+else if (selectFontFamily.value === "helvetica") {
+    topTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
+    bottomTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
+}
+else if (selectFontFamily.value === "impact") {
+    topTextMeme.style.fontFamily = "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+    bottomTextMeme.style.fontFamily = "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+}
+else if (selectFontFamily.value === "verdana") {
+    topTextMeme.style.fontFamily = "Verdana"
+    bottomTextMeme.style.fontFamily = "Verdana"
+}
+else if (selectFontFamily.value === "times new roman") {
+    topTextMeme.style.fontFamily = "'Times New Roman', Times, serif"
+    bottomTextMeme.style.fontFamily = "'Times New Roman', Times, serif"
+}
+})
 
 
 
