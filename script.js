@@ -25,6 +25,14 @@ const showAside = (asideToShow) => {
     asideTexto.classList.add('hidden');
     }
 };
+//funcion url - imagen
+const urlInput = document.getElementById('url-input');
+const imagenMeme = document.getElementById('imagenmeme');
+
+urlInput.addEventListener('input', function() {
+  const imageUrl = urlInput.value;
+  imagenMeme.style.backgroundImage = `url('${imageUrl}')`;
+});
 
 //funcion descarga meme
 const downloadButton = document.getElementById("download-btn");
@@ -38,16 +46,6 @@ domtoimage.toBlob(meme).then(function (blob) {
     window.saveAs(blob, "mi-meme.png");
 });
 };
-
-
-//funcion url - imagen
-const urlInput = document.getElementById('url-input');
-const imagenMeme = document.getElementById('imagenmeme');
-
-urlInput.addEventListener('input', function() {
-  const imageUrl = urlInput.value;
-  imagenMeme.style.backgroundImage = `url('${imageUrl}')`;
-});
 
 //funcion: modo oscuro-modo claro
 const btnModo = document.getElementById('btn-modo');
@@ -168,8 +166,8 @@ else if (selectFontFamily.value === "comic sans ms" ) {
     bottomTextMeme.style.fontFamily = "Comic Sans MS"
 }
 else if (selectFontFamily.value === "helvetica") {
-    topTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
-    bottomTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
+    topTextMeme.style.fontFamily = "Helvetica, sans-serif"
+    bottomTextMeme.style.fontFamily = "Helvetica, sans-serif"
 }
 else if (selectFontFamily.value === "impact") {
     topTextMeme.style.fontFamily = "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
@@ -185,6 +183,88 @@ else if (selectFontFamily.value === "times new roman") {
 }
 })
 
+//filtros
+const imgMeme = document.getElementById('imagenmeme');
+const brightInput = document.getElementById("bright-input");
+const contrastInput = document.getElementById("contrast-input");
+const opacityInput = document.getElementById("opacity-input");
+const blurInput = document.getElementById("blur-input");
+const grayscaleInput = document.getElementById("grayscale-input");
+const sepiaInput = document.getElementById("sepia-input");
+const hueInput = document.getElementById("hue-rotation-input");
+const saturateInput = document.getElementById("saturation-input");
+const invertInput = document.getElementById("invert-input");
+
+
+const filtros = () => {
+    imgMeme.style.filter = 
+    `brightness(${brightInput.value}) contrast(${contrastInput.value}%) opacity(${opacityInput.value}) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}) hue-rotate(${hueInput.value}deg) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
+};
+
+brightInput.addEventListener("input", () => filtros());
+contrastInput.addEventListener("input", () => filtros());
+opacityInput.addEventListener("input", () => filtros());
+blurInput.addEventListener("input", () => filtros());
+grayscaleInput.addEventListener("input", () => filtros());
+sepiaInput.addEventListener("input", () => filtros());
+hueInput.addEventListener("input", () => filtros());
+saturateInput.addEventListener("input", () => filtros());
+invertInput.addEventListener("input", () => filtros());
+
+//reestablecer filtros
+const resetFilters = () => {
+    brightInput.value = 1;
+    contrastInput.value = 100;
+    opacityInput.value = 1;
+    blurInput.value = 0;
+    grayscaleInput.value = 0;
+    sepiaInput.value = 0;
+    hueInput.value = 0;
+    saturateInput.value = 100;
+    invertInput.value = 0;
+  
+    filtros();
+  };
+
+  const resetButton = document.querySelector('.boton-filtros');
+  resetButton.addEventListener('click', resetFilters);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const brightness = document.getElementById('brightness');
+// const opacity = document.getElementById('opacity');
+// const contrast = document.getElementById('contrast');
+// const blur = document.getElementById('blur');
+// const grayscale = document.getElementById('grayscale');
+// const sepia = document.getElementById('sepia');
+// const hueRotation = document.getElementById('hue-rotation');
+// const saturation = document.getElementById('saturation');
+// const invert = document.getElementById('invert');
+
+// const rangeFiltros = () =>{
+
+
+
+
+
+// }
 
 
 

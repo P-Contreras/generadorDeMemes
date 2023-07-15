@@ -20,7 +20,6 @@
     integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
-    <link rel="icon" href="https://hips.hearstapps.com/hmg-prod/images/grumpy-cat-gatos-internet-meme-1582125875.jpg?crop=0.663xw:1.00xh;0.169xw,0&resize=1200:*"
 </head>
 
 <body>
@@ -51,7 +50,8 @@
                 <div class="texto-meme" id="top-text-meme">
                     Top text
                 </div>
-                <div id="imagenmeme" class="imagen-meme"></div>
+                <div id="imagenmeme" class="imagen-meme">
+                </div>
                 <div class="texto-meme" id="bottom-text-meme">
                     Bottom text
                 </div>
@@ -101,42 +101,42 @@
                     filtros
                 </h3>
                 <div class="container-filtros">
-                    <label for="brillo">Brillo</label>
-                    <input class="" type="range" min="1" max="100" value="100" class="" id="">
+                    <label for="brightness">Brillo</label>
+                    <input type="range" min="0" max="1" step="0.1" value="1" id="bright-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="opacidad">Opacidad</label>
-                        <input type="range" min="1" max="100" value="100" class="" id="">
+                    <label for="opacity">Opacidad</label>
+                        <input type="range" min="0" max="1" step="0.1" value="1" id="opacity-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="contraste">Contraste</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                    <label for="contrast">Contraste</label>
+                        <input type="range" min="100" max="1000" step="1" value="100" id="contrast-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="desenfoque">Desenfoque</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                    <label for="blur">Desenfoque</label>
+                        <input type="range" min="0" max="10" step="0.1" value="0" id="blur-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="escala">Escala de grises</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                    <label for="grayscale">Escala de grises</label>
+                        <input type="range" min="0" max="100" step="1" value="0" id="grayscale-input">
                 </div>
                 <div class="container-filtros">
                     <label for="sepia">Sepia</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                        <input type="range" min="0" max="100" step="1" value="0" id="sepia-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="hue">Hue</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                    <label for="hue-rotation">Hue</label>
+                        <input type="range" min="0" max="359" step="1" value="0" id="hue-rotation-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="saturado">Saturado</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                    <label for="saturation">Saturado</label>
+                        <input type="range" min="100" max="1000" step="10" value="100" id="saturation-input">
                 </div>
                 <div class="container-filtros">
-                    <label for="negativo">Negativo</label>
-                        <input type="range" min="1" max="100" value="1" class="" id="">
+                    <label for="invert">Negativo</label>
+                        <input type="range" min="0" max="1" step="0.1" value="0" id="invert-input">
                 </div>
-            </div>
+
                 <button class="unstyle boton-filtros">
                 Reestablecer filtros</button>
         </section>        
