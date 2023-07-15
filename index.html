@@ -48,12 +48,16 @@
         <section class="seccion-main margin">
             <div class="is-flex container-meme" id="meme-container">
                 <div class="texto-meme" id="top-text-meme">
-                    Top text
+                    <p>
+                        Top text
+                    </p>
                 </div>
                 <div id="imagenmeme" class="imagen-meme">
                 </div>
                 <div class="texto-meme" id="bottom-text-meme">
-                    Bottom text
+                    <p>
+                        Bottom text
+                    </p>
                 </div>
             </div>
             <button class="unstyle boton-descargar" id="download-btn">
@@ -185,20 +189,21 @@
                         <option value="verdana">Verdana</option>
                         <option value="times new roman">Times New Roman</option>
                     </select>
-                    <input type="number" class="input-tamanio-fuente" name="tamanio de fuente" min="12" value="40">
+                    <input type="number" id="tamanio-fuente" class="input-tamanio-fuente" name="tamanio de fuente" min="12" value="40">
                     <div class="is-flex">
-                        <button type="button" class="unstyle botones-align">
+                        <button type="button" id="textalign-izq" class="unstyle botones-align">
                             <i class="fa-solid fa-align-left"></i>
                         </button>
-                        <button type="button" class="unstyle botones-align">
+                        <button type="button" id="textalign-centro" class="unstyle botones-align">
                             <i class="fa-solid fa-align-center"></i>
                         </button>
-                        <button type="button" class="unstyle botones-align">
+                        <button type="button" id="textalign-der" class="unstyle botones-align">
                             <i class="fa-solid fa-align-right"></i>
                         </button>
                     </div>
                 </div>
                 </div>
+
                 <!-- color y fondo -->
 
                 <div class="container-fondo">
@@ -207,8 +212,8 @@
                             color
                         </h3>
                         <div class="color-fondo container-fondo">
-                            <input type="color" value="#ffffff" id="">
-                            <span class="span-color" id="">#FFFFFF</span>
+                            <input type="color" value="#ffffff" id="color-texto-input">
+                            <span class="span-color" id="span-color-texto">#FFFFFF</span>
                         </div>
                     </div>
                     <div>
@@ -216,8 +221,8 @@
                             fondo
                         </h3>
                         <div class="color-fondo container-fondo">
-                            <input type="color" value="#ffffff" id="">
-                            <span class="span-color" id="">#FFFFFF</span>
+                            <input type="color" value="#ffffff" id="color-fondotxt-input">
+                            <span class="span-color" id="span-color-fondo">#FFFFFF</span>
                         </div>
                     </div>
                     </div>

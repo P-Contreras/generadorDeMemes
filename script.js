@@ -183,6 +183,62 @@ else if (selectFontFamily.value === "times new roman") {
 }
 })
 
+//tamanio de fuente
+const inputTamanioFuente = document.getElementById("tamanio-fuente")
+console.log(inputTamanioFuente)
+
+inputTamanioFuente.oninput = () =>{
+    topTextMeme.style.fontSize = `${inputTamanioFuente.value}px` 
+    bottomTextMeme.style.fontSize = `${inputTamanioFuente.value}px`
+}
+
+// botones alienacion texto
+const textAlignLeft = document.getElementById("textalign-izq");
+const textAlignCenter = document.getElementById("textalign-centro");
+const textAlignRight = document.getElementById("textalign-der");
+
+textAlignLeft.onclick = () => {
+topTextMeme.style.justifyContent = "flex-start"
+bottomTextMeme.style.justifyContent = "flex-start"
+}
+
+textAlignCenter.onclick = () => {
+topTextMeme.style.justifyContent = "center"
+bottomTextMeme.style.justifyContent = "center"
+}
+
+textAlignRight.onclick = () => {
+topTextMeme.style.justifyContent = "flex-end"
+bottomTextMeme.style.justifyContent = "flex-end"
+}
+
+//Aside texto: funcion color
+const colorTextoInput = document.getElementById("color-texto-input");
+const spanColorTxt = document.getElementById("span-color-texto");
+
+colorTextoInput.addEventListener('input', () => {
+    topTextMeme.style.color = colorTextoInput.value
+    bottomTextMeme.style.color = colorTextoInput.value
+    spanColorTxt.textContent = (colorTextoInput.value);
+});
+
+//aside texto: funcion fondo
+const fondoTxtInput = document.getElementById("color-fondotxt-input");
+const spanColorFondo = document.getElementById("span-color-fondo");
+
+
+fondoTxtInput.addEventListener('input' , () => {
+    topTextMeme.style.backgroundColor = fondoTxtInput.value
+    bottomTextMeme.style.backgroundColor = fondoTxtInput.value
+    spanColorFondo.textContent = (fondoTxtInput.value)
+})
+
+
+
+
+
+
+
 //filtros
 const imgMeme = document.getElementById('imagenmeme');
 const brightInput = document.getElementById("bright-input");
@@ -198,7 +254,7 @@ const invertInput = document.getElementById("invert-input");
 
 const filtros = () => {
     imgMeme.style.filter = 
-    `brightness(${brightInput.value}) contrast(${contrastInput.value}%) opacity(${opacityInput.value}) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}) hue-rotate(${hueInput.value}deg) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
+        `brightness(${brightInput.value}) contrast(${contrastInput.value}%) opacity(${opacityInput.value}) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}) hue-rotate(${hueInput.value}deg) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
 };
 
 brightInput.addEventListener("input", () => filtros());
@@ -226,8 +282,8 @@ const resetFilters = () => {
     filtros();
   };
 
-  const resetButton = document.querySelector('.boton-filtros');
-  resetButton.addEventListener('click', resetFilters);
+  const reestablecerButton = document.querySelector('.boton-filtros');
+  reestablecerButton.addEventListener('click', resetFilters);
 
 
 
