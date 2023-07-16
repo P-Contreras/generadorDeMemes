@@ -25,6 +25,7 @@ const showAside = (asideToShow) => {
     asideTexto.classList.add('hidden');
     }
 };
+
 //funcion url - imagen
 const urlInput = document.getElementById('url-input');
 const imagenMeme = document.getElementById('imagenmeme');
@@ -150,8 +151,8 @@ if (selectFontFamily.value === "arial") {
     bottomTextMeme.style.fontFamily = "Arial, Helvetica, sans-serif"
 }
 else if (selectFontFamily.value === "arial black") {
-topTextMeme.style.fontFamily = "'Arial Black, Gadget, Arial, sans-serif'";
-bottomTextMeme.style.fontFamily = "'Arial Black, Gadget, Arial, sans-serif'";    
+    topTextMeme.style.fontFamily = "'Arial Black, Gadget, Arial, sans-serif'";
+    bottomTextMeme.style.fontFamily = "'Arial Black, Gadget, Arial, sans-serif'";    
 }
 else if (selectFontFamily.value === "georgia") {
     topTextMeme.style.fontFamily = "Georgia, 'Times New Roman', Times, serif"
@@ -233,10 +234,45 @@ fondoTxtInput.addEventListener('input' , () => {
     spanColorFondo.textContent = (fondoTxtInput.value)
 })
 
+//boton fondo transparente
+const checkTransparente = document.getElementById('check-fondo-transparente');
 
+checkTransparente.addEventListener('change', () => {
+    if (checkTransparente.checked) {
+    imagenMeme.style.display = 'block'
+    topTextMeme.style.backgroundColor = 'transparent';
+    topTextMeme.style.position = 'absolute';
+    bottomTextMeme.style.backgroundColor = 'transparent';
+    bottomTextMeme.style.position = 'absolute';
+    } else {
+    topTextMeme.style.backgroundColor = `${fondoTxtInput.value}`;
+    topTextMeme.style.position = 'static';
+    bottomTextMeme.style.backgroundColor = `${fondoTxtInput.value}`;
+    bottomTextMeme.style.position = 'static';
+    }
+});
+//ESTA FUNCION NO ANDA BIEN. AL CHECKEAR FONDO TRANSPARENTE EL TEXTO SE SUPERPONE
 
+//botones: contorno
+const btnNinguno = document.getElementById('btn-ninguno');
+const btnClaro = document.getElementById('btn-claro')
+const btnOscuro = document.getElementById('btn-oscuro')
 
+btnNinguno.onclick = () => {
+    topTextMeme.style.webkitTextStroke = "none"
+    bottomTextMeme.style.webkitTextStroke = "none"
 
+}
+
+btnClaro.onclick = () => {
+    topTextMeme.style.webkitTextStroke = "1px #FFFFFF";
+    bottomTextMeme.style.webkitTextStroke = "1px #FFFFFF";
+}
+
+btnOscuro.onclick = () => {
+    topTextMeme.style.webkitTextStroke = "1px #000000"
+    bottomTextMeme.style.webkitTextStroke = "1px #000000"
+}
 
 
 //filtros
