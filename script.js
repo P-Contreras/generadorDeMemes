@@ -274,6 +274,24 @@ btnOscuro.onclick = () => {
     bottomTextMeme.style.webkitTextStroke = "1px #000000"
 }
 
+//espaciado
+const inputEspaciado = document.getElementById("input-espaciado");
+
+inputEspaciado.oninput = () =>{
+    topTextMeme.style.height = `${inputEspaciado.value * 2}px`;
+    topTextMeme.style.marginBottom = `-${inputEspaciado.value * 2}px`;
+    bottomTextMeme.style.height = `${inputEspaciado.value * 2}px`;
+    bottomTextMeme.style.marginTop = `-${inputEspaciado.value * 2}px`;
+}
+
+//interlineado
+const selectInterlineado = document.getElementById("select-interlineado");
+
+selectInterlineado.addEventListener('change', () => {
+    const interlineado = selectInterlineado.value;
+    topTextMeme.style.lineHeight = interlineado;
+    bottomTextMeme.style.lineHeight = interlineado;
+});
 
 //filtros
 const imgMeme = document.getElementById('imagenmeme');
