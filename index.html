@@ -50,8 +50,7 @@
                 <div class="texto-meme" id="top-text-meme">
                         Top text
                 </div>
-                <div id="imagenmeme" class="imagen-meme">
-                </div>
+                <div id="imagenmeme" class="imagen-meme"></div>
                 <div class="texto-meme" id="bottom-text-meme">
                         Bottom text
                 </div>
@@ -64,6 +63,9 @@
     </main>
     
     <aside class="panel" id="asideImagen">
+        <button id="btn-cerrar-panel-img" class="unstyle btn-close" aria-label="cerrar el panel">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <h2 class="titulo-panel">
             IMAGEN
         </h2>
@@ -80,11 +82,11 @@
                     </h3>
                     <div class="flex container-fondo">
                         <div class="flex container-color-imagen">                            
-                            <input type="color" value="#FFFFFF" id="colorPicker">
+                            <input type="color" id="colorPicker">
                             <span class="span-color" id="colorName">#ffffff</span>
                         </div>
                         <div class="container-fondo">
-                            <select name="select-fondo" id="mezcla-de-fondo" onchange="aplicarFiltro()">
+                            <select name="select-fondo" id="mezcla-de-fondo">
                                 <option value="none" selected>Ninguno</option>
                                 <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
@@ -145,6 +147,9 @@
 
     <aside class="is-flex panel hidden" id="asideTexto">
         <section>
+            <button id="btn-cerrar-panel-txt" class="unstyle btn-close" aria-label="cerrar el panel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             <h2 class="titulo-panel">
                 TEXTO
             </h2>

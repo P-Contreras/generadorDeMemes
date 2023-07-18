@@ -38,7 +38,6 @@ urlInput.addEventListener('input', function() {
 //funcion descarga meme
 const downloadButton = document.getElementById("download-btn");
 const meme = document.getElementById("meme-container");
-console.log(meme)
 
 downloadButton.addEventListener("click", () => downloadMeme());
 
@@ -100,21 +99,30 @@ const textoMemeBottom = () => {
 }
 
 //funcion fondo 
-const aplicarFiltro = () => {
-    const selectFondo = document.getElementById("mezcla-de-fondo");
-    const imagen = document.getElementById("imagenmeme");
 
-    const filtro = selectFondo.value;
+const selectFondo = document.getElementById("mezcla-de-fondo");
 
-    if (filtro === "lighten") {
-        imagen.style.filter = "brightness(1.2)";
-    } else if (filtro === "darken") {
-        imagen.style.filter = "brightness(0.8)";
-    } else {
-        imagen.style.filter = filtro;
-    }
-};
-
+selectFondo.onchange = () => {
+    if (selectFondo.value === "lighten") {
+        imagenMeme.style.mixBlendMode = "lighten"
+        }
+        else if (selectFondo.value === "darken") {
+        imagenMeme.style.mixBlendMode = "darken"
+        }
+        else if (selectFondo.value === "difference") {
+        imagenMeme.style.mixBlendMode = "difference"
+        }
+        else if (selectFondo.value === "luminosity") {
+        imagenMeme.style.mixBlendMode = "luminosity"
+        }
+        else if (selectFondo.value === "multiply") {
+        imagenMeme.style.mixBlendMode = "multiply"
+        }
+        else {
+        imagenMeme.style.mixBlendMode = ""
+        }
+        console.log("me estoy ejecutando")
+} 
 
 //funcion color fondo
 const colorPicker = document.getElementById('colorPicker'); //input de color
@@ -186,7 +194,7 @@ else if (selectFontFamily.value === "times new roman") {
 
 //tamanio de fuente
 const inputTamanioFuente = document.getElementById("tamanio-fuente")
-console.log(inputTamanioFuente)
+
 
 inputTamanioFuente.oninput = () =>{
     topTextMeme.style.fontSize = `${inputTamanioFuente.value}px` 
@@ -239,11 +247,12 @@ const checkTransparente = document.getElementById('check-fondo-transparente');
 
 checkTransparente.addEventListener('change', () => {
     if (checkTransparente.checked) {
-    imagenMeme.style.display = 'block'
     topTextMeme.style.backgroundColor = 'transparent';
     topTextMeme.style.position = 'absolute';
     bottomTextMeme.style.backgroundColor = 'transparent';
     bottomTextMeme.style.position = 'absolute';
+    topTextMeme.style.top = 0;
+    bottomTextMeme.style.bottom = 0;
     } else {
     topTextMeme.style.backgroundColor = `${fondoTxtInput.value}`;
     topTextMeme.style.position = 'static';
@@ -251,37 +260,35 @@ checkTransparente.addEventListener('change', () => {
     bottomTextMeme.style.position = 'static';
     }
 });
-//ESTA FUNCION NO ANDA BIEN. AL CHECKEAR FONDO TRANSPARENTE EL TEXTO SE SUPERPONE
 
 //botones: contorno
 const btnNinguno = document.getElementById('btn-ninguno');
-const btnClaro = document.getElementById('btn-claro')
-const btnOscuro = document.getElementById('btn-oscuro')
+const btnClaro = document.getElementById('btn-claro');
+const btnOscuro = document.getElementById('btn-oscuro');
 
 btnNinguno.onclick = () => {
-    topTextMeme.style.webkitTextStroke = "none"
-    bottomTextMeme.style.webkitTextStroke = "none"
-
+    topTextMeme.style.textShadow = "none";
+    bottomTextMeme.style.textShadow = "none";
 }
 
 btnClaro.onclick = () => {
-    topTextMeme.style.webkitTextStroke = "1px #FFFFFF";
-    bottomTextMeme.style.webkitTextStroke = "1px #FFFFFF";
+    topTextMeme.style.textShadow = "2px 2px 1px #FFFFFF";
+    bottomTextMeme.style.textShadow = "2px 2px 1px #FFFFFF";
 }
 
 btnOscuro.onclick = () => {
-    topTextMeme.style.webkitTextStroke = "1px #000000"
-    bottomTextMeme.style.webkitTextStroke = "1px #000000"
+    topTextMeme.style.textShadow = "2px 2px 1px #000000";
+    bottomTextMeme.style.textShadow = "2px 2px 1px #000000";
 }
 
 //espaciado
 const inputEspaciado = document.getElementById("input-espaciado");
 
-inputEspaciado.oninput = () =>{
-    topTextMeme.style.height = `${inputEspaciado.value * 2}px`;
-    topTextMeme.style.marginBottom = `-${inputEspaciado.value * 2}px`;
-    bottomTextMeme.style.height = `${inputEspaciado.value * 2}px`;
-    bottomTextMeme.style.marginTop = `-${inputEspaciado.value * 2}px`;
+inputEspaciado.oninput = () => {
+    topTextMeme.style.paddingBottom = `${inputEspaciado.value * 2}px`;
+    topTextMeme.style.paddingTop =  `${inputEspaciado.value * 2}px`;
+    bottomTextMeme.style.paddingBottom = `${inputEspaciado.value * 2}px`;
+    bottomTextMeme.style.paddingTop =  `${inputEspaciado.value * 2}px`;
 }
 
 //interlineado
@@ -295,6 +302,7 @@ selectInterlineado.addEventListener('change', () => {
 
 //filtros
 const imgMeme = document.getElementById('imagenmeme');
+console.log(imgMeme)
 const brightInput = document.getElementById("bright-input");
 const contrastInput = document.getElementById("contrast-input");
 const opacityInput = document.getElementById("opacity-input");
@@ -332,53 +340,21 @@ const resetFilters = () => {
     hueInput.value = 0;
     saturateInput.value = 100;
     invertInput.value = 0;
-  
+
     filtros();
-  };
+};
 
-  const reestablecerButton = document.querySelector('.boton-filtros');
-  reestablecerButton.addEventListener('click', resetFilters);
+const reestablecerButton = document.querySelector('.boton-filtros');
+reestablecerButton.addEventListener('click', resetFilters);
 
+//boton cerrar panel 
+const closeButtonImage = document.getElementById("btn-cerrar-panel-img")
+const closeButtonText = document.getElementById("btn-cerrar-panel-txt")
 
+closeButtonImage.onclick = () => {
+    asideImagen.classList.add('hidden');
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const brightness = document.getElementById('brightness');
-// const opacity = document.getElementById('opacity');
-// const contrast = document.getElementById('contrast');
-// const blur = document.getElementById('blur');
-// const grayscale = document.getElementById('grayscale');
-// const sepia = document.getElementById('sepia');
-// const hueRotation = document.getElementById('hue-rotation');
-// const saturation = document.getElementById('saturation');
-// const invert = document.getElementById('invert');
-
-// const rangeFiltros = () =>{
-
-
-
-
-
-// }
-
-
-
-
-
-
-
+closeButtonText.onclick = () => {
+    asideTexto.classList.add('hidden');
+}
