@@ -98,6 +98,16 @@ const textoMemeBottom = () => {
     }
 }
 
+//funcion color fondo
+const colorPicker = document.getElementById('colorPicker'); //input de color
+const colorName = document.getElementById('colorName'); //span
+
+colorPicker.oninput = () => {
+    imagenMeme.style.backgroundColor = (colorPicker.value);
+    colorName.textContent = (colorPicker.value);
+}
+
+
 //funcion fondo 
 
 const selectFondo = document.getElementById("mezcla-de-fondo");
@@ -123,15 +133,6 @@ selectFondo.onchange = () => {
         }
         console.log("me estoy ejecutando")
 } 
-
-//funcion color fondo
-const colorPicker = document.getElementById('colorPicker'); //input de color
-const colorName = document.getElementById('colorName'); //span
-
-colorPicker.oninput = () => {
-    imagenMeme.style.backgroundColor = (colorPicker.value);
-    colorName.textContent = (colorPicker.value);
-}
 
 //funcion edición de texto
 

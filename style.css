@@ -5,6 +5,11 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+body {
+    overflow: hidden;
+    background-color: #e7d2b6;
+}
+
 .unstyle {
     all: unset;
 }
@@ -23,7 +28,12 @@ header {
 .modo-oscuro {
     background-color: #251030;
     color: #e2e2e2;
+    border: none;
 } 
+
+body .modo-oscuro {
+    background-color: #251030;
+}
 
 .encabezado {
     font-size: 40px;
@@ -60,7 +70,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 30px 87px 30px;
 }
 
 .container-meme {
@@ -103,7 +112,8 @@ header {
 #imagen-meme div {
     width: 100%;
     height: 100%;
-    justify-content: center;
+    justify-content: center; 
+
 }
 
 .boton-descargar {
@@ -411,6 +421,15 @@ input[type="color"]::-webkit-color-swatch {
     cursor: pointer;
 }
 
+.btn-close-txt {
+    font-size: 17px;
+    margin: 5px;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+}
+
 
 .panel-modo-oscuro {
     background-color: #6b1c3d;
@@ -419,6 +438,7 @@ input[type="color"]::-webkit-color-swatch {
 
 main {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -428,28 +448,71 @@ main {
 .modo-oscuro-main {
     background-color: #281831;
     color: #c54e7b;
+    padding-bottom: 120px;
+    border: 0;
 }
 
 .hidden {
     display: none;
 }
 
-/* responisve */
+/* responisve  */
 
 @media screen and (min-width: 1300px) {
     .btn-close {
     display: none;
     }
-}
-
-@media screen and (max-width: 1780px) {
-    .panel {
-    width: 20%;
+    .btn-close-txt {
+        display: none;
     }
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1660px) {
     .panel {
-    display: none;
+    width: 30%;
+    }
+
+    .seccion-main {
+        margin: 0;
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .panel {
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: 1118px) {
+    .seccion-main {
+    width: 600px;
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .seccion-main {
+    width: 100%;
+    }
+}
+
+  @media screen and (min-width: 1025px) {
+    .encabezado {
+      font-size: 40px;
+      padding-top: 30px;
+      padding-bottom: 21px;
+    }
+  
+    .container-meme {
+      width: 600px;
+      height: 600px;
+    }
+  
+    .texto-meme {
+      font-size: 30px;
+      padding: 35px 50px;
+    }
+  
+    .boton {
+      font-size: 18px;
+      padding: 12px;
+    }
