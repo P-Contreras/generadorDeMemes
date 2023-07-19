@@ -28,52 +28,57 @@
         <h1 class="is-flex encabezado">
             Generador de Memes
         </h1>
-        <div class="is-flex contenedor-botones">
-            <!-- botones del encabezado -->
-            <button class="boton unstyle" id="boton-imagen">
-                <i class="fa-regular fa-image"></i>
-                Imagen
-            </button>
-            <button class="boton unstyle" id="boton-texto">
-                <i class="fa-solid fa-font"></i>
-                Texto
-            </button>
-            <button class="boton unstyle" id="btn-modo">
-                <i class="fa-regular fa-lightbulb"></i>
+            <div class="is-flex contenedor-botones">
+                <!-- botones del encabezado -->
+                <button class="boton unstyle" id="boton-imagen">
+                    <i class="fa-regular fa-image"></i>
+                    Imagen
+                </button>
+                <button class="boton unstyle" id="boton-texto">
+                    <i class="fa-solid fa-font"></i>
+                    Texto
+                </button>
+                <button class="boton unstyle" id="btn-modo">
+                    <i class="fa-regular fa-lightbulb"></i>
                     <span id="span-modo"> Modo claro</span>
-            </button>
-        </div>
+                </button>
+            </div>
     </header>
+<!-- main -->
     <main>
         <section class="seccion-main margin">
             <div class="is-flex container-meme" id="meme-container">
                 <div class="texto-meme" id="top-text-meme">
                         Top text
                 </div>
-                <div id="imagenmeme" class="imagen-meme"></div>
+                    <div id="imagenmeme" class="imagen-meme"></div>
                 <div class="texto-meme" id="bottom-text-meme">
                         Bottom text
                 </div>
             </div>
             <button class="unstyle boton-descargar" id="download-btn">
                 <i class="fa-solid fa-download"></i>
-                Descargar meme
+                    Descargar meme
             </button>
         </section>
     </main>
-    
+
+    <!-- aside de Imagen -->
+
     <aside class="panel" id="asideImagen">
         <button id="btn-cerrar-panel-img" class="unstyle btn-close" aria-label="cerrar el panel">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <h2 class="titulo-panel">
-            IMAGEN
-        </h2>
+            <h2 class="titulo-panel">
+                IMAGEN
+            </h2>
         <section>
             <div>
                 <div class="container">
-                    <h3>url</h3>
-                    <input type="text" id="url-input" placeholder="Ingresa la URL de la imagen">
+                        <h3>
+                            url
+                        </h3>
+                            <input type="text" id="url-input" placeholder="Ingresa la URL de la imagen">
                 </div>
             </div>
                 <div>
@@ -97,14 +102,13 @@
                         </div>
                     </div>
                 </div>
-                    
-                </div>
+                <!-- filtros range -->
                 <h3>
                     filtros
                 </h3>
                 <div class="container-filtros">
                     <label for="brightness">Brillo</label>
-                    <input type="range" min="0" max="1" step="0.1" value="1" id="bright-input">
+                        <input type="range" min="0" max="1" step="0.1" value="1" id="bright-input">
                 </div>
                 <div class="container-filtros">
                     <label for="opacity">Opacidad</label>
@@ -138,13 +142,13 @@
                     <label for="invert">Negativo</label>
                         <input type="range" min="0" max="1" step="0.1" value="0" id="invert-input">
                 </div>
-
                 <button class="unstyle boton-filtros">
-                Reestablecer filtros</button>
+                Reestablecer filtros
+                </button>
         </section>        
     </aside>
 
-
+<!-- aside de texto -->
     <aside class="panel hidden" id="asideTexto">
         <button id="btn-cerrar-panel-txt" class="unstyle btn-close-txt" aria-label="cerrar el panel">
             <i class="fa-solid fa-xmark"></i>
@@ -158,120 +162,120 @@
                     superior
                 </h3>
                     <textarea name="topText" class="input-texto" id="txt-top" cols="30" rows="10" placeholder="Top Text"></textarea>
-                    <div class="checks">
-                        <input type="checkbox" id="check-top-text" onchange="textoMemeTop()">
-                        <label for="sin-top">Sin texto superior</label>
-                    </div>
+                        <div class="checks">
+                            <input type="checkbox" id="check-top-text" onchange="textoMemeTop()">
+                                <label for="sin-top">Sin texto superior</label>
+                        </div>
             </div>
             <div class="panel-texto">
                 <h3>
                     inferior
                 </h3>
                     <textarea name="bottomText" class="input-texto" id="txt-bottom" cols="30" rows="10" placeholder="Bottom Text"></textarea>
-                    <div class="checks">
-                        <input type="checkbox" id="check-bottom-text" onchange="textoMemeBottom()">
-                        <label for="sin-top">Sin texto inferior</label>
-                    </div>
+                        <div class="checks">
+                            <input type="checkbox" id="check-bottom-text" onchange="textoMemeBottom()">
+                                <label for="sin-top">Sin texto inferior</label>
+                        </div>
             </div>
             <div class="panel-fuente">
                 <h3>
                     fuente
                 </h3>
-                <div class="is-flex">
-                    <select name="fuente" id="font-family">
-                        <option selected disabled>Elija una fuente</option>
-                        <option value="arial">Arial</option>
-                        <option value="arial black">Arial Black</option>
-                        <option value="georgia">Georgia</option>
-                        <option value="monospace">Andale Mono</option>
-                        <option value="comic sans ms">Comic Sans MS</option>
-                        <option value="helvetica">Helvetica</option>
-                        <option value="impact">Impact</option>
-                        <option value="verdana">Verdana</option>
-                        <option value="times new roman">Times New Roman</option>
-                    </select>
-                    <input type="number" id="tamanio-fuente" class="input-tamanio-fuente" name="tamanio de fuente" min="12" value="40">
                     <div class="is-flex">
-                        <button type="button" id="textalign-izq" class="unstyle botones-align">
-                            <i class="fa-solid fa-align-left"></i>
-                        </button>
-                        <button type="button" id="textalign-centro" class="unstyle botones-align">
-                            <i class="fa-solid fa-align-center"></i>
-                        </button>
-                        <button type="button" id="textalign-der" class="unstyle botones-align">
-                            <i class="fa-solid fa-align-right"></i>
-                        </button>
+                        <select name="fuente" id="font-family">
+                            <option selected disabled>Elija una fuente</option>
+                            <option value="arial">Arial</option>
+                            <option value="arial black">Arial Black</option>
+                            <option value="georgia">Georgia</option>
+                            <option value="monospace">Andale Mono</option>
+                            <option value="comic sans ms">Comic Sans MS</option>
+                            <option value="helvetica">Helvetica</option>
+                            <option value="impact">Impact</option>
+                            <option value="verdana">Verdana</option>
+                            <option value="times new roman">Times New Roman</option>
+                        </select>
+                            <input type="number" id="tamanio-fuente" class="input-tamanio-fuente" name="tamanio de fuente" min="12" value="40">
+                                <div class="is-flex">
+                                    <button type="button" id="textalign-izq" class="unstyle botones-align">
+                                        <i class="fa-solid fa-align-left"></i>
+                                    </button>
+                                    <button type="button" id="textalign-centro" class="unstyle botones-align">
+                                        <i class="fa-solid fa-align-center"></i>
+                                    </button>
+                                    <button type="button" id="textalign-der" class="unstyle botones-align">
+                                        <i class="fa-solid fa-align-right"></i>
+                                    </button>
+                                </div>
                     </div>
-                </div>
-                </div>
+            </div>
 
                 <!-- color y fondo -->
-
                 <div class="container-fondo">
                     <div>
                         <h3>
                             color
                         </h3>
-                        <div class="color-fondo container-fondo">
-                            <input type="color" value="#ffffff" id="color-texto-input">
-                            <span class="span-color" id="span-color-texto">#FFFFFF</span>
-                        </div>
+                            <div class="color-fondo container-fondo">
+                                <input type="color" value="#ffffff" id="color-texto-input">
+                                    <span class="span-color" id="span-color-texto">#FFFFFF</span>
+                            </div>
                     </div>
                     <div>
                         <h3>
                             fondo
                         </h3>
-                        <div class="color-fondo container-fondo">
-                            <input type="color" value="#ffffff" id="color-fondotxt-input">
-                            <span class="span-color" id="span-color-fondo">#FFFFFF</span>
-                        </div>
+                            <div class="color-fondo container-fondo">
+                                <input type="color" value="#ffffff" id="color-fondotxt-input">
+                                    <span class="span-color" id="span-color-fondo">#FFFFFF</span>
+                            </div>
                     </div>
-                    </div>
+                </div>
                     <div class="checks check-fondo-transparente">
                         <input type="checkbox" name="fondo-transparente" id="check-fondo-transparente">
-                        <label for="fondo-transparente">Fondo transparente</label>
+                            <label for="fondo-transparente">Fondo transparente</label>
                     </div>
                     <div>
                         <h3>
                             contorno
                         </h3>
-                        <div>
-                            <button class="unstyle botones-align botones-texto" id="btn-ninguno">
-                                ninguno
-                            </button>
-                            <button class="unstyle botones-align botones-texto" id="btn-claro">
-                                claro
-                            </button>
-                            <button class="unstyle botones-align botones-texto" id="btn-oscuro">
-                                oscuro
-                            </button>
-                        </div>
+                            <div>
+                                <button class="unstyle botones-align botones-texto" id="btn-ninguno">
+                                    ninguno
+                                </button>
+                                <button class="unstyle botones-align botones-texto" id="btn-claro">
+                                    claro
+                                </button>
+                                <button class="unstyle botones-align botones-texto" id="btn-oscuro">
+                                    oscuro
+                                </button>
+                            </div>
                     </div>
                     <div>
                         <h3>
                             espaciado
                         </h3>
-                        <div class="espaciado-interlineado">
-                            <input type="number" id="input-espaciado" min="10" max="50" value="35"> 
-                        </div>
+                            <div class="espaciado-interlineado">
+                                <input type="number" id="input-espaciado" min="10" max="50" value="35"> 
+                            </div>
                     </div>
                     <div>
                         <h3>
                             interlineado
                         </h3>
-                        <div class="espaciado-interlineado">
-                            <select name="interlineado" id="select-interlineado">
-                                <option value="0.8">0.8</option>
-                                <option value="1">1</option>
-                                <option value="1.2" selected>1.2</option>
-                                <option value="1.5">1.5</option>
-                                <option value="2">2</option>
-                                <option value="2.5">2.5</option>
-                            </select>
-                        </div>
+                            <div class="espaciado-interlineado">
+                                <select name="interlineado" id="select-interlineado">
+                                    <option value="0.8">0.8</option>
+                                    <option value="1">1</option>
+                                    <option value="1.2" selected>1.2</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2">2</option>
+                                    <option value="2.5">2.5</option>
+                                </select>
+                            </div>
                     </div>
         </section>
     </aside>
-    <script src="script.js"></script>
+    
+<script src="script.js"></script>
 </body>
 </html>

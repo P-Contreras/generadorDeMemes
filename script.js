@@ -1,4 +1,5 @@
 //boton de texto e imagen - asides
+
 const botonImagen = document.getElementById('boton-imagen');
 const botonTexto = document.getElementById('boton-texto');
 
@@ -27,15 +28,17 @@ const showAside = (asideToShow) => {
 };
 
 //funcion url - imagen
+
 const urlInput = document.getElementById('url-input');
 const imagenMeme = document.getElementById('imagenmeme');
 
 urlInput.addEventListener('input', function() {
-  const imageUrl = urlInput.value;
-  imagenMeme.style.backgroundImage = `url('${imageUrl}')`;
+    const imageUrl = urlInput.value;
+    imagenMeme.style.backgroundImage = `url('${imageUrl}')`;
 });
 
 //funcion descarga meme
+
 const downloadButton = document.getElementById("download-btn");
 const meme = document.getElementById("meme-container");
 
@@ -48,6 +51,7 @@ domtoimage.toBlob(meme).then(function (blob) {
 };
 
 //funcion: modo oscuro-modo claro
+
 const btnModo = document.getElementById('btn-modo');
 
 const header = document.querySelector('header');
@@ -99,6 +103,7 @@ const textoMemeBottom = () => {
 }
 
 //funcion color fondo
+
 const colorPicker = document.getElementById('colorPicker'); //input de color
 const colorName = document.getElementById('colorName'); //span
 
@@ -194,6 +199,7 @@ else if (selectFontFamily.value === "times new roman") {
 })
 
 //tamanio de fuente
+
 const inputTamanioFuente = document.getElementById("tamanio-fuente")
 
 
@@ -203,6 +209,7 @@ inputTamanioFuente.oninput = () =>{
 }
 
 // botones alienacion texto
+
 const textAlignLeft = document.getElementById("textalign-izq");
 const textAlignCenter = document.getElementById("textalign-centro");
 const textAlignRight = document.getElementById("textalign-der");
@@ -223,6 +230,7 @@ bottomTextMeme.style.justifyContent = "flex-end"
 }
 
 //Aside texto: funcion color
+
 const colorTextoInput = document.getElementById("color-texto-input");
 const spanColorTxt = document.getElementById("span-color-texto");
 
@@ -233,6 +241,7 @@ colorTextoInput.addEventListener('input', () => {
 });
 
 //aside texto: funcion fondo
+
 const fondoTxtInput = document.getElementById("color-fondotxt-input");
 const spanColorFondo = document.getElementById("span-color-fondo");
 
@@ -244,6 +253,7 @@ fondoTxtInput.addEventListener('input' , () => {
 })
 
 //boton fondo transparente
+
 const checkTransparente = document.getElementById('check-fondo-transparente');
 
 checkTransparente.addEventListener('change', () => {
@@ -263,6 +273,7 @@ checkTransparente.addEventListener('change', () => {
 });
 
 //botones: contorno
+
 const btnNinguno = document.getElementById('btn-ninguno');
 const btnClaro = document.getElementById('btn-claro');
 const btnOscuro = document.getElementById('btn-oscuro');
@@ -283,6 +294,7 @@ btnOscuro.onclick = () => {
 }
 
 //espaciado
+
 const inputEspaciado = document.getElementById("input-espaciado");
 
 inputEspaciado.oninput = () => {
@@ -293,6 +305,7 @@ inputEspaciado.oninput = () => {
 }
 
 //interlineado
+
 const selectInterlineado = document.getElementById("select-interlineado");
 
 selectInterlineado.addEventListener('change', () => {
@@ -302,6 +315,7 @@ selectInterlineado.addEventListener('change', () => {
 });
 
 //filtros
+
 const imgMeme = document.getElementById('imagenmeme');
 console.log(imgMeme)
 const brightInput = document.getElementById("bright-input");
@@ -331,6 +345,7 @@ saturateInput.addEventListener("input", () => filtros());
 invertInput.addEventListener("input", () => filtros());
 
 //reestablecer filtros
+
 const resetFilters = () => {
     brightInput.value = 1;
     contrastInput.value = 100;
@@ -349,6 +364,7 @@ const reestablecerButton = document.querySelector('.boton-filtros');
 reestablecerButton.addEventListener('click', resetFilters);
 
 //boton cerrar panel 
+
 const closeButtonImage = document.getElementById("btn-cerrar-panel-img")
 const closeButtonText = document.getElementById("btn-cerrar-panel-txt")
 
