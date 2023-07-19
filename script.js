@@ -331,7 +331,7 @@ const invertInput = document.getElementById("invert-input");
 
 const filtros = () => {
     imgMeme.style.filter = 
-        `brightness(${brightInput.value}) contrast(${contrastInput.value}%) opacity(${opacityInput.value}) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}) hue-rotate(${hueInput.value}deg) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
+        `brightness(${brightInput.value}) contrast(${contrastInput.value}%) opacity(${opacityInput.value}) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueInput.value}deg) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
 };
 
 brightInput.addEventListener("input", () => filtros());
